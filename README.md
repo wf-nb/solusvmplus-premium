@@ -1,4 +1,4 @@
-# solusvmplus-premium
+# Solusvmplus-Premium
 
 一个solusvmpro的加强版本。
 
@@ -30,7 +30,7 @@
 
 大部分同solusvmpro，设置产品时可手动设置是否为NAT，初始流量等。
 
-
+如果你觉得好用的话，欢迎给个Star哦~
 
 ## **额外许可：**
 
