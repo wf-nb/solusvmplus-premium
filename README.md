@@ -35,3 +35,4 @@
 ## **额外许可：**
 
 **<u>本项目开源，任何人均可免费使用，严禁倒卖</u>**
+本项目基于solusvmnat以及Zeroteam的solusvmplus。
