@@ -8,7 +8,7 @@
 
 √NAT
 
-√用户中心重装系统、KVM重置网络、VNC、OpenVZ串行控制台（H5&Java&SSH）、实时显示CPU
+√用户中心重装系统、KVM重置网络、VNC、OpenVZ TUN/TAP、OpenVZ串行控制台（H5&Java&SSH）、实时显示CPU
 
 、RAM、流量使用情况、更改root密码、自动显示NAT端口等
 
