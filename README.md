@@ -38,4 +38,4 @@ PS：若无特殊情况，请使用5656作为API通信端口，避免出现问�
 
 **<u>本项目开源，任何人均可免费使用，严禁倒卖</u>**
 
-本项目基于solusvmnat以及 [Zeroteam](https://shop.zeroteam.top/)的solusvmplus。
+本项目基于solusvmnat以及Zeroteam的solusvmplus。
