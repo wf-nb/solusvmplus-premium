@@ -228,9 +228,7 @@
 		        	    						
 					    <li>{$LANG.solusvmplus_ipAddress}<span>{$info['connaddr']}</span></li>
 					    
-					    {foreach from=$info['ipcsv'] item=extip}
-					    <li>{$LANG.solusvmplus_ipAddress}<span>{$extip}</span></li>
-					    {/foreach}
+					    
 					    
 					    {if ($isnat == 'Yes')}
 						<li>{$LANG.solusvmplus_sshPort}<span>{$info['sshport']}</span></li>
