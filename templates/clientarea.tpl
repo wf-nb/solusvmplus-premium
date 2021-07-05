@@ -13,7 +13,6 @@
 {literal}
 <script>
     $(function () {
-
         var reload = false;
         var url = window.location.href;
         patPre = '&serveraction=custom&a=';
@@ -124,7 +123,7 @@
 {/literal}
 
 <div class="row">
-	
+
 	<div class="col-md-12">
 		<div class="meta-main">
 			<div class="pull-left">
@@ -143,7 +142,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 </div>
 
 <div id="displayState" class="text-center">
@@ -216,7 +215,7 @@
 		</div>
 	</div>
 	{/if}
-	
+
 	<div class="col-md-12 detail" style="display: none">
 		<div class="row">
         	<div class="col-md-7">
@@ -225,11 +224,13 @@
 		        		<li>{$LANG.solusvmplus_status}
 		        			<span>{$info['displaystatus']}</span>
 						</li>
-		        	    						
+
 					    <li>{$LANG.solusvmplus_ipAddress}<span>{$info['connaddr']}</span></li>
-					    
-					    
-					    
+
+					    {foreach from=$info['ipcsv'] item=extip}
+					    <li>{$LANG.solusvmplus_ipAddress}<span>{$extip}</span></li>
+					    {/foreach}
+
 					    {if ($isnat == 'Yes')}
 						<li>{$LANG.solusvmplus_sshPort}<span>{$info['sshport']}</span></li>
 						<li>{$LANG.solusvmplus_natPorts}<span>{$info['firstport']}-{$info['lastport']}</span></li>
@@ -353,10 +354,10 @@
         	</div>
     	</div>
 	</div>
-	 
+
     <div class="col-md-12">
         <div class="panel-group" id="solusvmplus_accordion" role="tablist" aria-multiselectable="false">
-            
+
             {if $info['displaygraphs'] == 1}
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingSix">
@@ -512,7 +513,7 @@
             {$LANG.solusvmplus_accessUnavailable}
         </div>
     </div>
-	
+
 	<div class="col-md-12">
 		<div class="panel panel-default panel-amount">
 			<div class="panel-heading">
@@ -521,21 +522,21 @@
         	<div class="panel-body">
 	        	<ul class="row list-unstyled top-main">
 		        	<li class="col-sm-6"><span>{$LANG.clientareahostingregdate}</span>{$regdate}</li>
-		
+
 					{if $firstpaymentamount neq $recurringamount}
 		            <li class="col-sm-6"><span>{$LANG.firstpaymentamount}</span>{$firstpaymentamount}</li>
 					{/if}
-		
+
 					{if $billingcycle != $LANG.orderpaymenttermonetime && $billingcycle != $LANG.orderfree}
 		            <li class="col-sm-6"><span>{$LANG.recurringamount}</span>{$recurringamount}</li>
 					{/if}
-		
+
 					<li class="col-sm-6"><span>{$LANG.orderbillingcycle}</span>{$billingcycle}</li>
-		
+
 					<li class="col-sm-6"><span>{$LANG.clientareahostingnextduedate}</span>{$nextduedate}</li>
-		
+
 					<li class="col-sm-6"><span>{$LANG.orderpaymentmethod}</span>{$paymentmethod}</li>
-		
+
 					{if $suspendreason}
 		            <li class="suspendreason col-sm-6"><span>{$LANG.suspendreason}</span>{$suspendreason}</li>
 					{/if}
@@ -543,7 +544,7 @@
         	</div>
 		</div>
 	</div>
-	
+
 </div>
 
 <div class="rebuildmsg text-center">
@@ -586,7 +587,7 @@
 			      <span class="text-center fa fa-spinner fa-pulse fa-5x fa-fw margin-bottom" style="margin: 50px;"></span>
 			</div>
 		</div>
-		
+
 	    <div class="rebuild-footer">
 		    <span class="pull-left" id="systemname"></span>
 		    <button type="submit" class="confirm" id="confirmbtn" disabled>{$LANG.orderForm.yes}</button>
